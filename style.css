@@ -1,0 +1,166 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    margin: 0px;
+}
+
+
+.bookForm{
+    /* this does work to hide it */
+    /* display: none; */
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    gap: 1.5rem;
+
+    grid-template-rows: 2.5rem 1.75rem 1.75rem 1.75rem 1fr;
+
+    /* background-color: gray; */
+
+    width: 60ch;
+    height: 35ch;
+
+    min-width: fit-content;
+
+    padding: 30px;
+    /* padding-right: 40px; */
+
+    border-radius: 30px;
+
+    box-shadow: inset 1px 0 0 5px goldenrod, 0 3px 5px 0 rgb(181, 195, 214);
+}
+
+
+
+.bookForm > button{
+    flex: none;
+    
+    width: 10ch;
+    height: 2rem;
+
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+/* .formRow3{
+    grid-row: -1;
+} */
+
+.formRow1, .formRow2, .formRow3{
+    display: flex;
+    padding-left: 5ch;
+    gap: 1ch;
+
+    /* max-width: 80%; */
+}
+
+.formRow3{
+    /* i genuinely don't why this is 'self' and not like. 'content'. but fine. */
+    justify-self: start;
+}
+
+.formRow1 > input, .formRow2 > input, .formRow3 > input{
+    flex: auto;
+    font-size: 1rem;
+}
+
+.formRow1 > label, .formRow2 > label, .formRow3 > label{
+    padding-top: 0.25rem;
+}
+
+
+/* okay if i go small form1 and form2 escape containment and im not sure why
+so does button
+(and so do the actual bounds of the heading) 
+
+i tried max-width and it helped on h3 and form1
+but i think author/pages are hitting some internal width minimum and i don't know how to override this in
+this MOST clean fashion?
+
+AND the max thing has made it look worse when at a normal zoom size
+(i could just give up on this part because ITS NOT THE POINT IM SUPPOSED TO BE LEARNING ABOUT OBEJCTS) 
+
+okay i cheated and just put a min:fit on the form itself and YES the button humps the bottom but its fine */
+
+
+.bookGrid{
+    margin: 40px;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, 30ch);
+    gap: 20px;
+}
+
+
+.bookCard{
+    /* this is  just until i have an actual grid item to nest this in */
+    /* margin-top: 30px; */
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    gap: 0.8rem;
+
+    grid-template-rows: 0 1rem 1fr 1fr;
+
+    /* background-color: gray; */
+
+    width: 30ch;
+    height: 30ch;
+
+    /* min-width: fit-content; */
+
+    padding: 25px;
+    padding-top: 0px;
+
+    border-radius: 30px;
+
+    /* inset 1px 0 0 5px goldenrod,  */
+    box-shadow: 0 3px 5px 0 rgb(181, 195, 214);
+
+    border-top: solid 4rem brown;
+    
+}
+
+.card1{
+    position: relative;
+    top: -2.5rem;
+
+    height: 1.5rem;
+
+    color:white;
+    text-align: center;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* .card2{
+    
+} */
+
+.card3{
+    display: flex;
+    justify-content: space-between;
+
+    font-style: italic;
+    color: gray;
+}
+
+.card4{
+    height: 3rem;
+    width: auto;
+
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    position: relative;
+    left: 1.5ch;
+    top: 1.5ch;
+}
