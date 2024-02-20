@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 class="topHeading">The Library</h1>
-    <form class="bookForm" name="newBookForm" action="" method="post">
-        <h3>New Book:</h3>
+    <button class="addBookButton" type="button"></button>
+    <form class="bookForm" name="newBookForm" action="javascript:;" method="post" onsubmit="submitForm()">
+        <div class="formRow0">
+            <h3>New Book:</h3>
+            <button class="hideFormButton" type="button"></button>
+        </div>
         <div class="formRow1">
             <label for="newTitle">Title:</label>
             <input required type="text" id="newTitle" name="bookTitle">
@@ -28,40 +32,46 @@
             <label for="newBeenRead">Already Read:</label>
             <input type="checkbox" id="newBeenRead" name="bookBeenRead">
 
-            <label for="newGenres">Genre:</label>
-            <select required id="newGenres" name="bookGenre">
+            <label for="newGenre">Genre:</label>
+            <select required id="newGenre" name="bookGenre">
+                <!-- these had low-case no-space values but that required a translation b4 display which feels
+                like an unecessary extra step in these circumstances -->
                 <option value="" disabled selected>Please select</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="sciFi">Science Fiction</option>
-                <option value="horror">Horror</option>
-                <option value="romance">Romance</option>
-                <option value="thriller">Thriller</option>
-                <option value="historical">Historical</option>
-                <option value="mystery">Mystery</option>
-                <option value="adventure">Adventure</option>
-                <option value="graphicNovel">Graphic Novel</option>
-                <option value="childrens">Children's</option>
-                <option value="nonFiction">Non-Fiction</option>
-                <option value="otherFiction">Other Fiction</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Historical">Historical</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Graphic Novel">Graphic Novel</option>
+                <option value="Children's">Children's</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Other Fiction">Other Fiction</option>
             </select>
         </div>
 
-        <button type="submit">+</button>
+        <button class="submitButton" type="submit">+</button>
     </form>
     
 
     <div class="bookGrid">
-        <div class="bookCard">
+        <!-- <div class="bookCard">
             <h3 class="card1">"Example Title of Book"</h3>
             <div class="card2">by Author Authorman</div>
             <div class="card3">
                 <div>Science Fiction</div>
                 <div>254 pages</div>
             </div>
-            <img class="card4" src="graphics/circle-outline.svg" alt="" width="25px" width="auto">
-        </div>
+            <div class="card4">
+                <button class="removeButton">Remove</button>
+                <img class ="isReadButton" src="graphics/circle-outline.svg" alt="" width="25px" width="auto">
+            </div>
+            
+        </div> -->
         
-        <div class="bookCard">
+        <!-- <div class="bookCard">
             <h3 class="card1">"Example Title of Book"</h3>
             <div class="card2">by Author Authorman</div>
             <div class="card3">
@@ -78,7 +88,7 @@
                 <div>254 pages</div>
             </div>
             <img class="card4" src="graphics/circle-outline.svg" alt="" width="25px" width="auto">
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

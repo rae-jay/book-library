@@ -6,14 +6,45 @@ h3{
     margin: 0px;
 }
 
+.addBookButton{
+    /* display: none; */
+
+    width: 8ch;
+    height: 8ch;
+
+    background-image: url(graphics/plus-circle-outline.svg);
+}
+
+.hideFormButton{
+    position: relative;
+    top: -1ch;
+
+    width: 4ch;
+    height: 4ch;
+
+    background-image: url(graphics/chevron-up-circle-outline.svg);
+}
+
+.addBookButton, .hideFormButton, .card4{
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.addBookButton:hover, .hideFormButton:hover, .card4 > button:hover{
+    cursor: grab;
+}
+
 
 .bookForm{
     /* this does work to hide it */
-    /* display: none; */
+    display: none;
 
     box-sizing: border-box;
 
-    display: grid;
+    /* display: grid; */
 
     gap: 1.5rem;
 
@@ -34,8 +65,6 @@ h3{
     box-shadow: inset 1px 0 0 5px goldenrod, 0 3px 5px 0 rgb(181, 195, 214);
 }
 
-
-
 .bookForm > button{
     flex: none;
     
@@ -45,6 +74,13 @@ h3{
     justify-self: flex-end;
     align-self: flex-end;
 }
+
+
+.formRow0{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* .formRow3{
     grid-row: -1;
@@ -123,7 +159,7 @@ okay i cheated and just put a min:fit on the form itself and YES the button hump
     /* inset 1px 0 0 5px goldenrod,  */
     box-shadow: 0 3px 5px 0 rgb(181, 195, 214);
 
-    border-top: solid 4rem brown;
+    border-top: solid 4rem ;
     
 }
 
@@ -154,13 +190,33 @@ okay i cheated and just put a min:fit on the form itself and YES the button hump
 }
 
 .card4{
-    height: 3rem;
-    width: auto;
+    display: flex;
 
-    align-self: flex-end;
-    justify-self: flex-end;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card4 > .isReadButton{
+    height: 3rem;
+    width: 3rem;    
 
     position: relative;
     left: 1.5ch;
     top: 1.5ch;
+
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card4 > .removeButton{
+    width: 10ch;
+    height: 3ch;
+
+    position: relative;
+    top: 1ch;
+    
+    border: none;
+    border-radius: 5px;
+
+    color: rgb(50, 50, 50);
 }
